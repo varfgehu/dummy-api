@@ -17,6 +17,9 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Package
+        run: ./mvnw clean package
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
