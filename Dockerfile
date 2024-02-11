@@ -1,4 +1,4 @@
-FROM maven:3.8-jdk-17 AS build
+FROM openjdk:17-oracle AS build
 
 WORKDIR /project
 
@@ -6,7 +6,7 @@ COPY ./ /project
 
 RUN mvn clean package
 
-FROM openjdk-17
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
