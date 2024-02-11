@@ -6,7 +6,7 @@ COPY ./ /project
 
 RUN mvn clean package
 
-FROM openjdk:11-jre-slim
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
