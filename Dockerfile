@@ -1,4 +1,4 @@
-FROM maven:3.8-jdk-11 AS build
+FROM maven:3.8-jdk-17 AS build
 
 WORKDIR /project
 
@@ -6,7 +6,7 @@ COPY ./ /project
 
 RUN mvn clean package
 
-FROM eclipse-temurin:17-jre-alpine
+FROM openjdk-17
 
 WORKDIR /app
 
