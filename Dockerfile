@@ -6,7 +6,7 @@ COPY ./ /project
 
 RUN mvn clean package
 
-FROM openjdk:17-jdk-slim
+FROM openjdk:11-jre-slim
 
 WORKDIR /app
 
