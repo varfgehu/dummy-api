@@ -1,4 +1,4 @@
-FROM openjdk:17-oracle AS build
+FROM openjdk:17-alpine AS build
 
 WORKDIR /project
 
